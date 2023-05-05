@@ -1,2 +1,0 @@
-# PokemonApp
-PokemonApplication Test Task
