@@ -11,10 +11,10 @@ import Foundation
 class PokemonListPresenter {
     
     private weak var view: PokemonListViewProtocol?
-    private let networkService: ServiceProtocol
+    private let networkService: NetworkServiceProtocol
     var pokemons: [PokemonList] = []
     
-    init(view: PokemonListViewProtocol, networkService: ServiceProtocol) {
+    init(view: PokemonListViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.networkService = networkService
     }
@@ -34,6 +34,14 @@ class PokemonListPresenter {
     
     func pokemon(at index: Int) -> PokemonList {
         return pokemons[index]
+    }
+    
+    func loadPreviousPage() {
+        
+    }
+    
+    func loadNextPage() {
+        
     }
 }
 

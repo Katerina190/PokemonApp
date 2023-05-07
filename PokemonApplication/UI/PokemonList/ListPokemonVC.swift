@@ -16,6 +16,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol  {
     private var presenter: PokemonListPresenter!
     
     @IBOutlet private weak var pokemonTableView: UITableView!
+  
     
     
         override func viewDidLoad() {

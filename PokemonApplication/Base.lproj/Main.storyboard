@@ -35,10 +35,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EHY-zj-KAb" secondAttribute="bottom" id="HSt-Il-Ult"/>
-                            <constraint firstItem="EHY-zj-KAb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XiD-gn-YU7"/>
-                            <constraint firstItem="EHY-zj-KAb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bJY-5f-21l"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EHY-zj-KAb" secondAttribute="trailing" id="zuf-LN-Oso"/>
+                            <constraint firstItem="EHY-zj-KAb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LqO-1l-apV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EHY-zj-KAb" secondAttribute="bottom" id="UJB-kv-LsS"/>
+                            <constraint firstItem="EHY-zj-KAb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ke2-bs-bIG"/>
+                            <constraint firstItem="EHY-zj-KAb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="myg-en-Ku2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dl0-dD-fTy"/>

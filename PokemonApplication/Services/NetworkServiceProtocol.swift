@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ServiceProtocol {
+protocol NetworkServiceProtocol {
     func loadPokemons(completion: @escaping(PokemonModel) -> Void)
     func loadPokemonDetails(completion: @escaping([PokemonDetailsModel]) -> Void)
 }
