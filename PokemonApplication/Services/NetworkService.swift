@@ -9,8 +9,8 @@ import Foundation
 
 class NetworkService: NetworkServiceProtocol {
     
-    func loadPokemons(completion: @escaping (PokemonModel) -> Void) {
-        guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon") else { return }
+    func loadPokemons(url: URL, completion: @escaping (PokemonModel) -> Void) {
+       // guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon") else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

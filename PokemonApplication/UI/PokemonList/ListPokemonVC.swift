@@ -16,9 +16,8 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol  {
     private var presenter: PokemonListPresenter!
     
     @IBOutlet private weak var pokemonTableView: UITableView!
-  
-    
-    
+
+   
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -33,10 +32,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol  {
         func reloadData() {
             pokemonTableView.reloadData()
         }
-
-    
 }
-
 
 extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,5 +44,11 @@ extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {
         let pokemon = presenter.pokemon(at: indexPath.row)
         cell.textLabel?.text = pokemon.name
         return cell
+    }
+        func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == presenter.pokemons.count - 1 {
+            presenter.loadPokemons()
+        }
+        
     }
 }
