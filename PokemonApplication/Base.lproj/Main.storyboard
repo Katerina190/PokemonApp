@@ -110,6 +110,13 @@
                             <constraint firstItem="2Gs-ih-tFH" firstAttribute="top" secondItem="ym3-GR-6Rh" secondAttribute="bottom" constant="20" id="zuh-oB-Hl8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="lDS-ab-ZSu" id="437-3d-Ocm"/>
+                        <outlet property="nameLabel" destination="ym3-GR-6Rh" id="5zb-9z-GbC"/>
+                        <outlet property="pokemonImage" destination="eeC-ge-rMa" id="QZn-uC-LvY"/>
+                        <outlet property="typeLabel" destination="2Gs-ih-tFH" id="CGS-G3-Wk5"/>
+                        <outlet property="weightLabel" destination="OnW-Ta-oWL" id="lVh-TK-82a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beT-Zo-4QO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

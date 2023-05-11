@@ -9,5 +9,5 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     func loadPokemons(url: URL, completion: @escaping(PokemonModel) -> Void)
-    func loadPokemonDetails(completion: @escaping([PokemonDetailsModel]) -> Void)
+    func loadPokemonDetails(url: URL, completion: @escaping(PokemonDetailsModel) -> Void)
 }
