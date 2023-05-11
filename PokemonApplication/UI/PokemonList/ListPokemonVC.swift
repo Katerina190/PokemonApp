@@ -8,10 +8,10 @@
 import UIKit
 
 class ListPokemonVC: UIViewController, PokemonListViewProtocol {
-
+    //MARK: - Outlets
     @IBOutlet private weak var pokemonTableView: UITableView!
 
-    private var presenter: PokemonListPresenter!
+    private var presenter: ListPokemonPresenter!
     
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -19,7 +19,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol {
             let networkService = NetworkService()
             pokemonTableView.dataSource = self
             pokemonTableView.delegate = self
-            presenter = PokemonListPresenter(view: self, networkService: networkService)
+            presenter = ListPokemonPresenter(view: self, networkService: networkService)
             presenter.loadPokemons()
         }
     
@@ -27,7 +27,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol {
             pokemonTableView.reloadData()
         }
 }
-
+    //MARK: - Extensions
 extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.pokemons.count
@@ -44,6 +44,14 @@ extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == presenter.pokemons.count - 1 {
             presenter.loadPokemons()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "POKEMONS"
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

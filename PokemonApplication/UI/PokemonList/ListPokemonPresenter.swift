@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PokemonListPresenter: PokemonListPresenterProtocol {
+final class ListPokemonPresenter: PokemonListPresenterProtocol {
     
     var pokemons: [PokemonList] = []
     var nextURL: String = "https://pokeapi.co/api/v2/pokemon"

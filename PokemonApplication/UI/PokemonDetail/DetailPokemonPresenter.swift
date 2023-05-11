@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PokemonDetailPresenter: PokemonDetailPresenterProtocol {
+class DetailPokemonPresenter: PokemonDetailPresenterProtocol {
     
     weak var view: DetailPokemonViewProtocol?
     var pokemonDetail: PokemonDetailsModel?

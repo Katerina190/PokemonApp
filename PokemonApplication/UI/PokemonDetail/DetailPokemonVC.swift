@@ -8,7 +8,7 @@ import Foundation
 import UIKit
 
 final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
-    
+    //MARK: - Outlets
     @IBOutlet private weak var pokemonImage: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var typeLabel:UILabel!
@@ -16,14 +16,14 @@ final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
     @IBOutlet private weak var heightLabel: UILabel!
     
     var pokemonURL: String!
-    private var presenter: PokemonDetailPresenter!
+    private var presenter: DetailPokemonPresenter!
      
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = PokemonDetailPresenter(view: self, networkService: NetworkService(), pokemonURL: pokemonURL)
+        presenter = DetailPokemonPresenter(view: self, networkService: NetworkService(), pokemonURL: pokemonURL)
         presenter.loadPokemonDetails()
     }
-    
+    //MARK: Function for load image
     func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(nil)
@@ -43,7 +43,7 @@ final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
         }
         task.resume()
     }
-    
+    //MARK: - Func for update UI with details
     func updateUI() {
         guard let pokemonDetail = presenter.pokemonDetail else { return }
         nameLabel.text = pokemonDetail.name
