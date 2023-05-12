@@ -30,6 +30,7 @@
 		C8786E252A0D90720031FA66 /* PokemonListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8786E242A0D90720031FA66 /* PokemonListPresenterProtocol.swift */; };
 		C8786E272A0D90860031FA66 /* PokemonDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8786E262A0D90860031FA66 /* PokemonDetailPresenterProtocol.swift */; };
 		C8786E2B2A0D9DA00031FA66 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C8786E2A2A0D9DA00031FA66 /* Alamofire */; };
+		C8786E2D2A0E7B390031FA66 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8786E2C2A0E7B390031FA66 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		C8786E212A0D8EDA0031FA66 /* PokemonListViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListViewProtocol.swift; sourceTree = "<group>"; };
 		C8786E242A0D90720031FA66 /* PokemonListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPresenterProtocol.swift; sourceTree = "<group>"; };
 		C8786E262A0D90860031FA66 /* PokemonDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailPresenterProtocol.swift; sourceTree = "<group>"; };
+		C8786E2C2A0E7B390031FA66 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				C83344B92A07CB3300E7BEDE /* NetworkServiceProtocol.swift */,
 				C83344BB2A07CB4600E7BEDE /* NetworkService.swift */,
+				C8786E2C2A0E7B390031FA66 /* DataProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				C83344B42A06DBD100E7BEDE /* PokemonModel.swift in Sources */,
 				C83344782A059A5D00E7BEDE /* AppDelegate.swift in Sources */,
 				C833447A2A059A5D00E7BEDE /* SceneDelegate.swift in Sources */,
+				C8786E2D2A0E7B390031FA66 /* DataProvider.swift in Sources */,
 				C8786E202A0D5D020031FA66 /* DetailPokemonViewProtocol.swift in Sources */,
 				C83344BA2A07CB3300E7BEDE /* NetworkServiceProtocol.swift in Sources */,
 				C83344C02A07CBAB00E7BEDE /* DetailPokemonPresenter.swift in Sources */,

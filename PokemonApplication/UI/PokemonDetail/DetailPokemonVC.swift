@@ -20,11 +20,12 @@ final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = DetailPokemonPresenter(view: self, networkService: NetworkService(), pokemonURL: pokemonURL)
+        presenter = DetailPokemonPresenter(view: self, networkService: NetworkService(), pokemonURL: pokemonURL, dataProvider: DataProvider())
         presenter.loadPokemonDetails()
     }
     //MARK: Function for load image
     func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
+        
         guard let url = URL(string: urlString) else {
             completion(nil)
             return
@@ -46,15 +47,15 @@ final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
     //MARK: - Func for update UI with details
     func updateUI() {
         guard let pokemonDetail = presenter.pokemonDetail else { return }
-        nameLabel.text = pokemonDetail.name
+        nameLabel.text = "Name: \(pokemonDetail.name)"
         
         if let imageUrlString = pokemonDetail.sprites.frontDefault {
                 loadImage(from: imageUrlString) { [weak self] image in
                     self?.pokemonImage.image = image
                 }
             }
-        typeLabel.text = pokemonDetail.types.first?.type.name
-        weightLabel.text = "\(pokemonDetail.weight) kg"
-        heightLabel.text = "\(pokemonDetail.height) cm"
+        typeLabel.text = "Type: \(pokemonDetail.types.first?.type.name ?? "no way!")"
+        weightLabel.text = "Height: \(pokemonDetail.weight) kg"
+        heightLabel.text = "Weight: \(pokemonDetail.height) cm"
     }
 }
