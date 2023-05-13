@@ -19,6 +19,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol {
             let networkService = NetworkService()
             pokemonTableView.dataSource = self
             pokemonTableView.delegate = self
+            
             presenter = ListPokemonPresenter(view: self, networkService: networkService)
             presenter.loadPokemons()
         }
@@ -27,7 +28,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol {
             pokemonTableView.reloadData()
         }
 }
-    //MARK: - Extensions
+    //MARK: - Extension
 extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.pokemons.count
@@ -51,7 +52,7 @@ extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 20
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
