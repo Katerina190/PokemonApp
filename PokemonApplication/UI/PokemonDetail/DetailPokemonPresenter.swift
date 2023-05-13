@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class DetailPokemonPresenter: PokemonDetailPresenterProtocol {
     
@@ -13,12 +14,18 @@ class DetailPokemonPresenter: PokemonDetailPresenterProtocol {
     var pokemonDetail: PokemonDetailsModel?
     private let networkService: NetworkServiceProtocol
     private let pokemonURL: String
+    private let dataProvider: DataProvider
     
-    init(view: DetailPokemonViewProtocol, networkService: NetworkServiceProtocol, pokemonURL: String) {
+    init(view: DetailPokemonViewProtocol, networkService: NetworkServiceProtocol, pokemonURL: String, dataProvider: DataProvider) {
         self.view = view
         self.networkService = networkService
         self.pokemonURL = pokemonURL
+        self.dataProvider = dataProvider
     }
+    
+    func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
+           dataProvider.loadImage(from: urlString, completion: completion)
+       }
     
     func loadPokemonDetails() {
         guard let url = URL(string: pokemonURL) else { return }
