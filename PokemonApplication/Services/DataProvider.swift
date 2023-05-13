@@ -8,7 +8,7 @@
 import UIKit
 
 class DataProvider {
-    
+    //MARK: - function of work with cache
     var imageCache = NSCache<NSString, UIImage>()
     
     func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {

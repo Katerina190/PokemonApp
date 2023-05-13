@@ -11,7 +11,6 @@
 		C833447A2A059A5D00E7BEDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83344792A059A5D00E7BEDE /* SceneDelegate.swift */; };
 		C833447C2A059A5D00E7BEDE /* ListPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C833447B2A059A5D00E7BEDE /* ListPokemonVC.swift */; };
 		C833447F2A059A5D00E7BEDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C833447D2A059A5D00E7BEDE /* Main.storyboard */; };
-		C83344822A059A5D00E7BEDE /* PokemonApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C83344802A059A5D00E7BEDE /* PokemonApplication.xcdatamodeld */; };
 		C83344842A059A6000E7BEDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83344832A059A6000E7BEDE /* Assets.xcassets */; };
 		C83344872A059A6000E7BEDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83344852A059A6000E7BEDE /* LaunchScreen.storyboard */; };
 		C83344922A059A6000E7BEDE /* PokemonApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83344912A059A6000E7BEDE /* PokemonApplicationTests.swift */; };
@@ -31,6 +30,10 @@
 		C8786E272A0D90860031FA66 /* PokemonDetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8786E262A0D90860031FA66 /* PokemonDetailPresenterProtocol.swift */; };
 		C8786E2B2A0D9DA00031FA66 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C8786E2A2A0D9DA00031FA66 /* Alamofire */; };
 		C8786E2D2A0E7B390031FA66 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8786E2C2A0E7B390031FA66 /* DataProvider.swift */; };
+		C8786E3A2A0EAEBC0031FA66 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = C8786E392A0EAEBC0031FA66 /* Realm */; };
+		C8786E3C2A0EAEBC0031FA66 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C8786E3B2A0EAEBC0031FA66 /* RealmSwift */; };
+		C8786E452A0EDFF70031FA66 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = C8786E442A0EDFF70031FA66 /* SQLite */; };
+		C8786E472A0EE0830031FA66 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8786E462A0EE0830031FA66 /* DatabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +59,6 @@
 		C83344792A059A5D00E7BEDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C833447B2A059A5D00E7BEDE /* ListPokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPokemonVC.swift; sourceTree = "<group>"; };
 		C833447E2A059A5D00E7BEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C83344812A059A5D00E7BEDE /* PokemonApplication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokemonApplication.xcdatamodel; sourceTree = "<group>"; };
 		C83344832A059A6000E7BEDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C83344862A059A6000E7BEDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C83344882A059A6000E7BEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		C8786E242A0D90720031FA66 /* PokemonListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListPresenterProtocol.swift; sourceTree = "<group>"; };
 		C8786E262A0D90860031FA66 /* PokemonDetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailPresenterProtocol.swift; sourceTree = "<group>"; };
 		C8786E2C2A0E7B390031FA66 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		C8786E462A0EE0830031FA66 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8786E452A0EDFF70031FA66 /* SQLite in Frameworks */,
+				C8786E3C2A0EAEBC0031FA66 /* RealmSwift in Frameworks */,
+				C8786E3A2A0EAEBC0031FA66 /* Realm in Frameworks */,
 				C8786E2B2A0D9DA00031FA66 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +142,6 @@
 				C83344832A059A6000E7BEDE /* Assets.xcassets */,
 				C83344852A059A6000E7BEDE /* LaunchScreen.storyboard */,
 				C83344882A059A6000E7BEDE /* Info.plist */,
-				C83344802A059A5D00E7BEDE /* PokemonApplication.xcdatamodeld */,
 			);
 			path = PokemonApplication;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				C83344B92A07CB3300E7BEDE /* NetworkServiceProtocol.swift */,
 				C83344BB2A07CB4600E7BEDE /* NetworkService.swift */,
 				C8786E2C2A0E7B390031FA66 /* DataProvider.swift */,
+				C8786E462A0EE0830031FA66 /* DatabaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -253,6 +259,9 @@
 			name = PokemonApplication;
 			packageProductDependencies = (
 				C8786E2A2A0D9DA00031FA66 /* Alamofire */,
+				C8786E392A0EAEBC0031FA66 /* Realm */,
+				C8786E3B2A0EAEBC0031FA66 /* RealmSwift */,
+				C8786E442A0EDFF70031FA66 /* SQLite */,
 			);
 			productName = PokemonApplication;
 			productReference = C83344742A059A5D00E7BEDE /* PokemonApplication.app */;
@@ -328,6 +337,8 @@
 			mainGroup = C833446B2A059A5D00E7BEDE;
 			packageReferences = (
 				C8786E292A0D9DA00031FA66 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C8786E382A0EAEBC0031FA66 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				C8786E432A0EDFF70031FA66 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = C83344752A059A5D00E7BEDE /* Products */;
 			projectDirPath = "";
@@ -372,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8786E472A0EE0830031FA66 /* DatabaseService.swift in Sources */,
 				C83344BC2A07CB4600E7BEDE /* NetworkService.swift in Sources */,
 				C83344AE2A06B66600E7BEDE /* PokemonDetailsModel.swift in Sources */,
 				C83344B02A06B69E00E7BEDE /* DetailPokemonVC.swift in Sources */,
@@ -379,7 +391,6 @@
 				C8786E252A0D90720031FA66 /* PokemonListPresenterProtocol.swift in Sources */,
 				C8786E272A0D90860031FA66 /* PokemonDetailPresenterProtocol.swift in Sources */,
 				C8786E222A0D8EDA0031FA66 /* PokemonListViewProtocol.swift in Sources */,
-				C83344822A059A5D00E7BEDE /* PokemonApplication.xcdatamodeld in Sources */,
 				C8786E162A0802740031FA66 /* PokemonCell.swift in Sources */,
 				C833447C2A059A5D00E7BEDE /* ListPokemonVC.swift in Sources */,
 				C83344B42A06DBD100E7BEDE /* PokemonModel.swift in Sources */,
@@ -740,6 +751,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C8786E382A0EAEBC0031FA66 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		C8786E432A0EDFF70031FA66 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -748,20 +775,22 @@
 			package = C8786E292A0D9DA00031FA66 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		C83344802A059A5D00E7BEDE /* PokemonApplication.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C83344812A059A5D00E7BEDE /* PokemonApplication.xcdatamodel */,
-			);
-			currentVersion = C83344812A059A5D00E7BEDE /* PokemonApplication.xcdatamodel */;
-			path = PokemonApplication.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+		C8786E392A0EAEBC0031FA66 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8786E382A0EAEBC0031FA66 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
 		};
-/* End XCVersionGroup section */
+		C8786E3B2A0EAEBC0031FA66 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8786E382A0EAEBC0031FA66 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		C8786E442A0EDFF70031FA66 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8786E432A0EDFF70031FA66 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C833446C2A059A5D00E7BEDE /* Project object */;
 }

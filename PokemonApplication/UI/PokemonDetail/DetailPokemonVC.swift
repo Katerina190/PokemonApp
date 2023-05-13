@@ -47,15 +47,17 @@ final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
     //MARK: - Func for update UI with details
     func updateUI() {
         guard let pokemonDetail = presenter.pokemonDetail else { return }
-        nameLabel.text = "Name: \(pokemonDetail.name)"
+        nameLabel.text = "\(pokemonDetail.name)"
         
         if let imageUrlString = pokemonDetail.sprites.frontDefault {
                 loadImage(from: imageUrlString) { [weak self] image in
-                    self?.pokemonImage.image = image
+                    DispatchQueue.main.async {
+                        self?.pokemonImage.image = image
+                    }
                 }
             }
-        typeLabel.text = "Type: \(pokemonDetail.types.first?.type.name ?? "no way!")"
-        weightLabel.text = "Height: \(pokemonDetail.weight) kg"
-        heightLabel.text = "Weight: \(pokemonDetail.height) cm"
+        typeLabel.text = "\(pokemonDetail.types.first?.type.name ?? "no way!")"
+        weightLabel.text =  "\(pokemonDetail.weight) kg"
+        heightLabel.text = "\(pokemonDetail.height) cm"
     }
 }

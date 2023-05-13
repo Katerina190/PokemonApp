@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class DetailPokemonPresenter: PokemonDetailPresenterProtocol {
     
@@ -26,12 +27,29 @@ class DetailPokemonPresenter: PokemonDetailPresenterProtocol {
     func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
            dataProvider.loadImage(from: urlString, completion: completion)
        }
-    
+    //MARK: - Uploading details and saving to the database
     func loadPokemonDetails() {
         guard let url = URL(string: pokemonURL) else { return }
-        networkService.loadPokemonDetails(url: url) { [weak self] pokemonDetail in
-            self?.pokemonDetail = pokemonDetail
-            self?.view?.updateUI()
+        if isConnectedToInternet {
+            networkService.loadPokemonDetails(url: url) { [weak self] pokemonDetail in
+                self?.pokemonDetail = pokemonDetail
+                if let pokemonDetail = self?.pokemonDetail {
+                    DatabaseService.shared.addPokemonDetail(pokemonDetail: pokemonDetail)
+                }
+                self?.view?.updateUI()
+            }
+        } else {
+            if let pokemonID = Int(url.lastPathComponent) {
+                let pokemonDetail = DatabaseService.shared.getPokemonDetail(id: pokemonID)
+                self.pokemonDetail = pokemonDetail
+            } else {
+                print("Invalid ID")
+            }
+            self.view?.updateUI()
         }
+    }
+    
+    var isConnectedToInternet: Bool {
+        return NetworkReachabilityManager()?.isReachable ?? false
     }
 }
