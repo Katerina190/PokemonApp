@@ -27,6 +27,12 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol {
         func reloadData() {
             pokemonTableView.reloadData()
         }
+    
+        func showNoInternetAlert() {
+        let alert = UIAlertController(title: "No Internet Connection", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
     //MARK: - Extension
 extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {

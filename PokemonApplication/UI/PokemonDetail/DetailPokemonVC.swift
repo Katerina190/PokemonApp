@@ -56,7 +56,7 @@ final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
                     }
                 }
             }
-        typeLabel.text = "\(pokemonDetail.types.first?.type.name ?? "no way!")"
+        typeLabel.text = "\(pokemonDetail.types.first?.type.name ?? "unknown type")"
         weightLabel.text =  "\(pokemonDetail.weight) kg"
         heightLabel.text = "\(pokemonDetail.height) cm"
     }

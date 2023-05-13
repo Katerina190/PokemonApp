@@ -9,4 +9,5 @@ import Foundation
 
 protocol PokemonListViewProtocol: AnyObject {
     func reloadData()
+    func showNoInternetAlert()
 }

@@ -45,6 +45,7 @@ final class ListPokemonPresenter: PokemonListPresenterProtocol {
             let pokemons = DatabaseService.shared.getPokemons()
             self.pokemons = pokemons
             DispatchQueue.main.async {
+                self.view?.showNoInternetAlert()
                 self.view?.reloadData()
             }
         }

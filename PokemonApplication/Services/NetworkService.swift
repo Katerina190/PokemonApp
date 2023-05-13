@@ -25,8 +25,7 @@ class NetworkService: NetworkServiceProtocol {
         }.resume()
         
         //MARK: - error: request for data
-        guard reachability?.isReachable ?? false else {
-            // Обработка отсутствия интернет-соединения
+        guard reachability?.isReachable ?? false else {            
             print("No internet connection")
             return
         }
