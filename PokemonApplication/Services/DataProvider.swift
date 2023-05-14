@@ -8,9 +8,9 @@
 import UIKit
 
 class DataProvider {
-    //MARK: - function of work with cache
+    //MARK: - Caching
     var imageCache = NSCache<NSString, UIImage>()
-    
+
     func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
         let debugMode = true
         if let cachedImage = imageCache.object(forKey: urlString as NSString) {
@@ -40,8 +40,8 @@ class DataProvider {
                     completion(image)
                 }
                  if debugMode {
-                                 print("Image not found in cache")
-                             }
+                    print("Image not found in cache")
+                }
             }.resume()
             print("Image not found in cache")
         }

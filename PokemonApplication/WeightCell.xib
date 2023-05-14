@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeightCell" rowHeight="61" id="5bp-Bf-PO8" customClass="WeightCell" customModule="PokemonApplication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="61"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5bp-Bf-PO8" id="m3n-ig-3ih">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UR6-Sy-R6g">
+                        <rect key="frame" x="82" y="10" width="291" height="41"/>
+                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="21"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdR-Pr-bce">
+                        <rect key="frame" x="20" y="10" width="52" height="41"/>
+                        <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="21"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.59409394859999998" green="0.77536543609999997" blue="0.8537016369" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <constraints>
+                    <constraint firstItem="qdR-Pr-bce" firstAttribute="top" secondItem="m3n-ig-3ih" secondAttribute="top" constant="10" id="4uR-ei-WPx"/>
+                    <constraint firstItem="qdR-Pr-bce" firstAttribute="leading" secondItem="m3n-ig-3ih" secondAttribute="leading" constant="20" id="7DF-bQ-51g"/>
+                    <constraint firstItem="UR6-Sy-R6g" firstAttribute="leading" secondItem="qdR-Pr-bce" secondAttribute="trailing" constant="10" id="Cyg-mY-O2P"/>
+                    <constraint firstAttribute="bottom" secondItem="UR6-Sy-R6g" secondAttribute="bottom" constant="10" id="QG9-Zq-5WV"/>
+                    <constraint firstAttribute="bottom" secondItem="qdR-Pr-bce" secondAttribute="bottom" constant="10" id="Tnl-o2-YfO"/>
+                    <constraint firstAttribute="trailing" secondItem="UR6-Sy-R6g" secondAttribute="trailing" constant="20" id="gxM-JX-4sY"/>
+                    <constraint firstItem="UR6-Sy-R6g" firstAttribute="top" secondItem="m3n-ig-3ih" secondAttribute="top" constant="10" id="uDb-MV-fMK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="weightCall" destination="qdR-Pr-bce" id="Z2B-T1-V8k"/>
+                <outlet property="weightLabel" destination="UR6-Sy-R6g" id="8Ft-4B-UYp"/>
+            </connections>
+            <point key="canvasLocation" x="125.95419847328243" y="14.43661971830986"/>
+        </tableViewCell>
+    </objects>
+</document>

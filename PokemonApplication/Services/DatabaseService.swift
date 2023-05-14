@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import SQLite
 
 class DatabaseService {
@@ -43,7 +42,6 @@ class DatabaseService {
                         table.column(id, primaryKey: true)
                         table.column(name)
                         table.column(url)
-                        // добавьте другие столбцы в соответствии с вашей моделью
                     })
             try db!.run(pokemonDetails.create { table in
                         table.column(id, primaryKey: true)
@@ -56,7 +54,7 @@ class DatabaseService {
             print("Unable to create table")
         }
     }
-    //MARK: - Adding a new entry
+    //MARK: - Add a new entry
     func addPokemon(pokemon: PokemonList) {
         do {
             let insert = pokemons.insert(name <- pokemon.name, url <- pokemon.url)
@@ -69,7 +67,6 @@ class DatabaseService {
         var pokemons = [PokemonList]()
         do {
             for pokemon in try db!.prepare(self.pokemons) {
-                // Создайте экземпляр PokemonList и добавьте его в массив
                 let pokemon = PokemonList(name: pokemon[name], url: pokemon[url])
                 pokemons.append(pokemon)
             }
@@ -78,7 +75,7 @@ class DatabaseService {
         }
         return pokemons
     }
-    //MARK: - Adding and updating a table pokemonDetails table
+    //MARK: - Get and update the details
     func addPokemonDetail(pokemonDetail: PokemonDetailsModel) {
         guard let db = self.db else { return }
         let details = pokemonDetails.filter(id == pokemonDetail.id)
@@ -104,7 +101,7 @@ class DatabaseService {
             print("Error saving pokemon detail: \(error)")
         }
     }
-    //MARK: - getting details from pokemonDetails table
+    //MARK: - Get the details
     func getPokemonDetail(id: Int) -> PokemonDetailsModel? {
         guard let db = self.db else { return nil }
         let details = pokemonDetails.filter(self.id == id)

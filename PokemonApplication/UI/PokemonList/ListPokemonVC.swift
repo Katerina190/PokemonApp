@@ -10,7 +10,7 @@ import UIKit
 class ListPokemonVC: UIViewController, PokemonListViewProtocol {
     //MARK: - Outlets
     @IBOutlet private weak var pokemonTableView: UITableView!
-
+    
     private var presenter: ListPokemonPresenter!
     
         override func viewDidLoad() {
@@ -58,7 +58,10 @@ extension ListPokemonVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
+        return 25
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

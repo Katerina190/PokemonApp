@@ -27,7 +27,7 @@ class DetailPokemonPresenter: PokemonDetailPresenterProtocol {
     func loadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
            dataProvider.loadImage(from: urlString, completion: completion)
        }
-    //MARK: - Uploading details and saving to the database
+    //MARK: - Load the details
     func loadPokemonDetails() {
         guard let url = URL(string: pokemonURL) else { return }
         if isConnectedToInternet {
