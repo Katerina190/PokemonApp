@@ -24,7 +24,7 @@ class NetworkService: NetworkServiceProtocol {
         
         //MARK: - error: request for data
         guard reachability?.isReachable ?? false else {            
-           // print("No internet connection")
+           print("No internet connection")
             return
         }
         AF.request(url).responseData { response in

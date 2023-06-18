@@ -32,6 +32,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol {
         func showNoInternetAlert() {
         let alert = UIAlertController(title: "No Internet Connection", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true, completion: nil)
     }
 }
