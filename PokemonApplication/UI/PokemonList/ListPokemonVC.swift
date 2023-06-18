@@ -19,6 +19,7 @@ class ListPokemonVC: UIViewController, PokemonListViewProtocol {
             let networkService = NetworkService()
             pokemonTableView.dataSource = self
             pokemonTableView.delegate = self
+            view.backgroundColor = UIColor(named: "backgroundColor")
             
             presenter = ListPokemonPresenter(view: self, networkService: networkService)
             presenter.loadPokemons()

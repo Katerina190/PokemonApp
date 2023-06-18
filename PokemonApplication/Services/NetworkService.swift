@@ -11,7 +11,6 @@ import Alamofire
 class NetworkService: NetworkServiceProtocol {
     private let reachability = NetworkReachabilityManager()
     func loadPokemons(url: URL, completion: @escaping (PokemonModel) -> Void) {
-        // guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request) { responseData, response, error in
@@ -25,28 +24,26 @@ class NetworkService: NetworkServiceProtocol {
         
         //MARK: - error: request for data
         guard reachability?.isReachable ?? false else {            
-            print("No internet connection")
+           // print("No internet connection")
             return
         }
         AF.request(url).responseData { response in
             guard let httpResponse = response.response else {
-                print("Request failed")
+              //  print("Request failed")
                 return
             }
             guard httpResponse.statusCode == 200 else {
-                print("Invalid response")
+               // print("Invalid response")
                 return
             }
             guard let data = response.data else {
-                print("Invalid data")
+               // print("Invalid data")
                 return
             }
         }
     }
     
     func loadPokemonDetails(url: URL, completion: @escaping (PokemonDetailsModel) -> Void) {
-        // guard let url = URL(string: "https://pokeapi.co/api/v2/pokemon/id")
-        // else { return }
         var detailRequest = URLRequest(url: url)
         detailRequest.httpMethod = "GET"
         URLSession.shared.dataTask(with: detailRequest) { responseData, response, error in
@@ -60,20 +57,20 @@ class NetworkService: NetworkServiceProtocol {
         
         //MARK: - error: request for data
         guard reachability?.isReachable ?? false else {
-            print("No internet connection")
+           // print("No internet connection")
             return
         }
         AF.request(url).responseData { response in
             guard let httpResponse = response.response else {
-                print("Request failed")
+              //  print("Request failed")
                 return
             }
             guard httpResponse.statusCode == 200 else {
-                print("Invalid response")
+              //  print("Invalid response")
                 return
             }
             guard let data = response.data else {
-                print("Invalid data")
+              //  print("Invalid data")
                 return
             }
         }

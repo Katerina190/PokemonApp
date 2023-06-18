@@ -32,7 +32,7 @@ class DatabaseService {
             }
         } catch {
             db = nil
-            print ("Unable to open database")
+           // print ("Unable to open database")
         }
     }
     //MARK: - Creating tables
@@ -51,7 +51,7 @@ class DatabaseService {
                         table.column(imageUrl)
                     })
         } catch {
-            print("Unable to create table")
+            //print("Unable to create table")
         }
     }
     //MARK: - Add a new entry
@@ -60,7 +60,7 @@ class DatabaseService {
             let insert = pokemons.insert(name <- pokemon.name, url <- pokemon.url)
             try db!.run(insert)
         } catch {
-            print("Insert failed")
+           // print("Insert failed")
         }
     }
     func getPokemons() -> [PokemonList] {
@@ -71,7 +71,7 @@ class DatabaseService {
                 pokemons.append(pokemon)
             }
         } catch {
-            print("Select failed")
+           // print("Select failed")
         }
         return pokemons
     }
@@ -98,7 +98,7 @@ class DatabaseService {
                 ))
             }
         } catch {
-            print("Error saving pokemon detail: \(error)")
+            //print("Error saving pokemon detail: \(error)")
         }
     }
     //MARK: - Get the details
@@ -117,7 +117,7 @@ class DatabaseService {
                 return pokemonDetail
             }
         } catch {
-            print("Error retrieving pokemon detail: \(error)")
+           // print("Error retrieving pokemon detail: \(error)")
         }
         return nil
     }

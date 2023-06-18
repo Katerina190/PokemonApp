@@ -43,7 +43,7 @@ final class DetailPokemonVC: UIViewController, DetailPokemonViewProtocol  {
         }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {
-                    print("Error loading image: \(error)")
+                  //  print("Error loading image: \(error)")
                 } 
             if let data = data, let image = UIImage(data: data) {
                 DispatchQueue.main.async {

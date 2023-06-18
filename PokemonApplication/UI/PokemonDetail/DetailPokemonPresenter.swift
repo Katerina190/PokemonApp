@@ -43,7 +43,7 @@ class DetailPokemonPresenter: PokemonDetailPresenterProtocol {
                 let pokemonDetail = DatabaseService.shared.getPokemonDetail(id: pokemonID)
                 self.pokemonDetail = pokemonDetail
             } else {
-                print("Invalid ID")
+               // print("Invalid ID")
             }
             self.view?.updateUI()
         }
